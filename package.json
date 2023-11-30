@@ -1,0 +1,44 @@
+{
+  "name": "2geza-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev nodemon index.js",
+    "start": "cross-env NODE_ENV=prod node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itroom18/2geza.git"
+  },
+  "author": "ITROOM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itroom18/2geza/issues"
+  },
+  "homepage": "https://github.com/itroom18/2geza#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-idempotency": "^1.0.5",
+    "helmet": "^7.1.0",
+    "html-entities": "^2.4.0",
+    "https": "^1.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.2.0",
+    "nodemailer": "^6.9.1",
+    "sequelize": "^6.29.3",
+    "uniqid": "^5.4.0",
+    "uuidv4": "^6.2.13",
+    "ws": "^8.13.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
