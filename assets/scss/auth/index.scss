@@ -1,0 +1,129 @@
+@import "components/reg.scss";
+@import "components/auth.scss";
+.wrap-auth-reg {
+    .auth,
+.register {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  margin: 40px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 28px;
+}
+
+.form-input {
+    button {
+      background: linear-gradient(90.25deg, #2c96ea 9.03%, #00d1ff 98.03%);
+      transition: 0.3s;
+      border-radius: 23.5px;
+      color: white;
+      height: 44px;
+    }
+    button:hover {
+      background: linear-gradient(90.25deg, #2c96ea 9.03%, #00d1ff 98.03%);
+    }
+    button:focus {
+        background: linear-gradient(90.25deg, #2c96ea 9.03%, #00d1ff 98.03%);
+        color: white;
+    }
+}
+.wrap-auth-reg {
+  width: 70%;
+  display: flex;
+  padding-left: 0;
+}
+.tab-buttons {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  button {
+    color: #989898;
+    font-size: 20px !important;
+    background: none !important;
+    border: none;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-transform: uppercase;
+    width: auto;
+  }
+  button:hover {
+    color: #000 !important;
+  }
+}
+.active {
+  border-bottom: 2px solid #2c96ea !important;
+  color: #000 !important;
+}
+.wrap-auth {
+  width: 100%;
+  max-width: 680px;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.form-input {
+  width: 90%;
+  min-width: 200px;
+  input,
+  input[type='email'],
+  input[type='password'] {
+    width: 100%;
+    min-width: 200px;
+  }
+  .form-button {
+    span {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: $x-small) {
+  .wrap-auth-reg {
+    padding: 0;
+  }
+  .auth,
+  .register {
+    width: 100%;
+    max-width: 690px;
+    min-width: 290px;
+    margin: 0;
+    padding: 0;
+  }
+  .wrap-auth {
+    width: 100%;
+    max-width: 690px;
+    min-width: 290px;
+  }
+  .wrap-req {
+    width: 100%;
+    max-width: 690px;
+    min-width: 290px;
+  }
+  .tab-buttons {
+    padding: 40px !important;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 0 !important;
+    gap: 20px;
+  }
+  .form-input {
+    width: 90%;
+    input,
+    input[type='email'],
+    input[type='password'] {
+      width: 100%;
+    }
+    .form-button {
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+}
+}

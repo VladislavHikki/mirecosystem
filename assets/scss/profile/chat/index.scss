@@ -1,0 +1,181 @@
+.chat {
+  display: flex;
+  border: 1px solid var(--blue);
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  height: calc(100vh - 75px);
+  &-message {
+    width: fit-content;
+    padding: 8px;
+    &-content {
+      word-break: break-word;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    &_type {
+      &--user {
+        background-color: var(--user-message);
+      }
+
+      &--other-user {
+        background-color: var(--other-user-message);
+      }
+    }
+  }
+
+  &-card {
+    display: flex;
+    cursor: pointer;
+    gap: 12px;
+    padding: 24px 12px;
+    border-bottom: 1px solid var(--blue);
+    &--selected {
+      background-color: var(--blue);
+      color: white;
+      transition: 0.3s;
+    }
+    &--unselected {
+      background-color: white;
+      color: black;
+      transition: 0.3s;
+    }
+    &_info {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      &_last-message, &_name {
+        word-break: break-word;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+      }
+    }
+    &_new-message-circle {
+      height: 20px;
+      aspect-ratio: 1;
+      background-color: var(--blue);
+      border-radius: 50%;
+      align-items: l;
+      align-self: center;
+    }
+  }
+  &_users-panel {
+    max-width: 320px;
+    min-width: 320px;
+    border-right: 1px solid var(--blue);
+    overflow-y: scroll;
+    transition: .2s;
+    &_type {
+      @media (max-width: $medium) {
+        &--active {
+          flex: 1 1 auto;
+          max-width: none;
+          border-right: none;
+        }
+        &--disabled {
+          width: 0;
+          border-right: none;
+          min-width: 0;
+          transition: .2s;
+        }
+      }
+    }
+    &_search {
+      display: flex;
+      padding: 24px;
+      & > input {
+        flex: 1 1 auto;
+      }
+      border-bottom: 1px solid var(--blue);
+    }
+    &_container {
+      &_warning {
+        padding: 12px;
+      }
+    }
+  }
+  &_content {
+    display: flex;
+    flex-direction: column;
+    // flex: 1 1 auto;
+    height: 100%;
+    &--disabled {
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      &_info {
+        background-color: var(--blue);
+        color: white;
+        padding: 12px;
+      }
+      @media (max-width: $medium) {
+        display: none;
+      }
+    }
+    &--active {
+      align-items: flex-start;
+      width: 100%;
+    }
+    &_header {
+      display: flex;
+      border-bottom: 1px solid var(--blue);
+      padding: 12px;
+      width: 100%;
+      gap: 12px;
+      &_cancel {
+        display: none;
+        @media (max-width: $medium) {
+          display: block;
+        }
+      }
+    }
+    &_body {
+      width: 100%;
+      flex: 1 1 auto;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      padding: 12px;
+      gap: 8px;
+    }
+    &_footer {
+      width: 100%;
+      display: flex;
+      border-top: 1px solid var(--blue);
+      background-color: white;
+      @media (max-width: $x-small) {
+        flex-direction: column;
+        &_button {
+          width: 100%;
+          border-top-right-radius: 0;
+          border-top-left-radius: 0 !important;
+        }
+      }
+      &_text-field {
+        max-height: 200px;
+        min-height: 45px;
+      }
+      &_button {
+        align-self: flex-end;
+        border-top-right-radius: 0 !important;
+      }
+      &_container {
+        flex: 1 1 auto;
+        display: flex;
+        .emoji-picker-container {
+          align-self: flex-end;
+          padding-bottom: 12px;
+        }
+      }
+      &_text-field {
+        padding: 12px;
+        flex: 1 1 auto;
+        resize: none;
+      }
+    }
+  }
+}

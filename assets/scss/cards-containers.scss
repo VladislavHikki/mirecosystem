@@ -1,0 +1,53 @@
+.last-resource-cards,
+.last-command-cards,
+.franchisingLeaders-cards,
+.last-franchise-cards,
+.leaders-referals-cards,
+.last-referals-cards,
+.sponsors-cards,
+.player-cards,
+.trainer-cards,
+.division_cards_team_container,
+.teams_card,
+.profileTeam_card,
+.profileTeam_cont,
+.derive-cards_container {
+  display: grid;
+  padding: 30px 1px;
+  // content-visibility: auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  font-weight: 400;
+  width: 100%;
+  @media screen and (max-width: $large) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media screen and (max-width: $small) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.cards-container {
+  display: grid;
+  padding: 30px 1px;
+  gap: 30px;
+  font-weight: 400;
+  width: 100%;
+  &_tools {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &_column--two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &_column--three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: $large) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media screen and (max-width: $small) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

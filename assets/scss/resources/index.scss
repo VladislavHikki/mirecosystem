@@ -1,0 +1,186 @@
+.resources, #resources {
+  gap: unset;
+  .container {
+    display: grid;
+    @media (max-width: $medium) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .resource-miro {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .resource_form_item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    h2 {
+      margin: 0px;
+    }
+  }
+  .find-input_resource_filter {
+    input {
+      max-width: 311px;
+      width: 100%;
+      padding-left: 15px;
+      height: 43px;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    }
+  }
+  .find {
+    display: flex;
+    justify-content: center;
+    input {
+      max-width: 311px;
+      width: 100%;
+      padding-left: 15px;
+      height: 43px;
+      background: #ffffff;
+      border-radius: 14px 0 0 14px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+      @media screen and (max-width: $x-small) {
+        max-width: 100%;
+      }
+    }
+    
+    .find_btn {
+      margin: 0 !important;
+      padding: 0;
+      background: #2c96ea;
+      background-image: url(~/assets/images/find.png);
+      background-size: 20px 20px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 55px;
+      height: 43px;
+      border-radius: 0px 14px 14px 0px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    }
+    @media screen and (max-width: $x-small) {
+      margin-left: 0px;
+    }
+  }
+  .category_cont {
+    margin-bottom: 20px;
+    padding-bottom: 2px;
+    span {
+      font-weight: 700;
+    }
+  }
+  .container-resources,
+  .container_miro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // position: relative;
+    h2 {
+      margin-bottom: 5px;
+      @media (max-width: $big) and (min-width: $medium) {
+        font-size: 24px;
+      }
+    }
+    ul {
+      margin-bottom: 5px;
+    }
+  }
+  .container-resources-card {
+    position: sticky;
+    top: 60px;
+  }
+  .content-resources {
+    align-content: flex-start;
+    display: grid;
+    gap: 30px 50px;
+    grid-template-columns: repeat(4,1fr);
+    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // gap: 50px 20px;
+    .other_res { grid-area: 1 / 3 / 4 / 4; }
+    .corporate_res { grid-area: 4 / 3 / 6 / 4; }
+    .regional_res { grid-area: 1 / 2 / 6 / 3; }
+    .national_res { grid-area: 1 / 1 / 6 / 2; }
+    // {
+    //   break-inside: avoid-column;
+    //   margin-bottom: 30px;
+    //   &_second {
+    //     display: grid;
+    //     grid-template-columns: 1fr 1fr;
+    //     gap: 30px;
+    //   }
+    // }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 5px;
+      @media (max-width: $big) and (min-width: $medium) {
+        font-size: 24px;
+      }
+    }
+    @media (max-width: $large) {
+      grid-template-columns: 2fr 1fr;
+      .other_res { grid-area: unset; }
+      .corporate_res { grid-area: unset; }
+      .regional_res { grid-area: unset; }
+      .national_res { grid-area: unset; }
+    }
+    // @media (max-width: $medium) {
+    //   column-count: 2;
+    // }
+    @media (max-width: $small) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  // .franchisingLeaders-cards {
+  //   grid-template-columns: repeat(1, 1fr) !important;
+  // }
+  .content_item {
+    &_second {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    ul {
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+      li a {
+        font-size: 18px;
+        @media (max-width: $big) and (min-width: $medium) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  @media (max-width: $medium) {
+    .content {
+      justify-items: start;
+      justify-content: center;
+    }
+  }
+  .resource_form_item {
+    margin-bottom: 20px;
+    @media (max-width: 575.98px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .p-dropdown {
+      margin: 0 !important;
+    }
+  }
+}
+#button-ind {
+  margin-top: 34px;
+  color: white;
+  background: #18af10;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  font-size: 20px;
+  padding: 15px 45px;
+  @media screen and (max-width: $x-small) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

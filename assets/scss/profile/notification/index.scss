@@ -1,0 +1,23 @@
+.notification {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+    &_roles, &_sponsor, &_transaction, &_chats {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    &_card {
+      background-color: white;
+      min-height: 75px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      padding: 17px 21px 16px 20px;
+      max-width: 494px;
+      gap: 20px;
+    }
+  }

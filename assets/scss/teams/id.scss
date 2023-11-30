@@ -1,0 +1,22 @@
+
+  .teams_resource {
+    .p-dropdown {
+      margin-bottom: 0 !important;
+    }
+  }
+  .teams_resource {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  @media screen and (max-width: $large) {
+    .teams_resource {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    // display: block;
+  }
+// .teams_card{
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     grid-gap: 25px;
+// }

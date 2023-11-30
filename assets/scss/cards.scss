@@ -1,0 +1,145 @@
+.lastResource-card,
+.lastFranchise-card,
+.franchisingLeaders-card,
+.lastReferal-card,
+.referalsLeaders-card,
+.lastCommand-card,
+.derive-card,
+.triad-card {
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 17px 21px 16px 20px;
+  max-width: 494px;
+  word-break: break-word;
+
+  // .resource_card_user_avatar {
+  //   padding-left: 20px;
+  //   //border-left: 1px solid #bbbbbb;
+  // }
+
+  .avatar_container {
+    background: linear-gradient(to bottom, #18af10, #019ec3);
+    border-radius: 100%;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .usersLink {
+    a {
+      color: #2c96ea;
+      font-size: 18px;
+      word-break: break-all;
+    }
+  }
+  &_info {
+    padding-left: 20px;
+    border-left: 1px solid #bbbbbb;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    gap: 7px;
+    &_by_resource_id {
+      border-right: 1px solid #bbbbbb;
+      padding-right: 20px;
+    }
+    .userName {
+      // word-break: break-all;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .usersTxt {
+      // word-break: break-all;
+      font-size: 20px;
+    }
+    // .userName,
+    // .usersTxt,
+    .showAllTxtCard,
+    .usersLink,
+    .countryAndRegion {
+      word-break: break-all;
+      -webkit-line-clamp: 1;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .tags {
+      color: #6c6c6c;
+      font-size: 15px;
+    }
+    .data {
+      color: #9b9b9b;
+      font-size: 13px;
+    }
+    .labels {
+      // word-break: break-all;
+      color: #6c6c6c;
+      font-size: 15px;
+    }
+    .stats {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+  }
+
+  .referalsLeaders-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .cpds {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      .cpd {
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .text_ucpd {
+          color: #fb830d;
+        }
+        .text_cpd {
+          color: #1bc231;
+        }
+      }
+    }
+  }
+
+}
+
+.lastResource-card {
+  &_by_resource_id {
+    max-width: unset;
+  }
+}
+
+.oneResourse {
+  display: flex;
+  flex-direction: row !important;
+  align-items: flex-start;
+}
+
+@media (max-width: $medium) {
+  .card_resource_show {
+    .lastResource-card {
+      min-width: 50%;
+      flex-direction: column;
+      .lastResource-card_info {
+        width: 100%;
+        border-top: 1px solid #bbbbbb;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #bbbbbb;
+        padding-left: 0px !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}

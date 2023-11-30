@@ -1,0 +1,27 @@
+.header_down {
+  @media (min-width: $x-small) {
+    display: none;
+  }
+  @media (max-width: $x-small) {
+    padding: 15px;
+  }
+  position: sticky;
+  bottom: 0;
+  text-align: center;
+  height: 45px;
+  padding: 5px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  background: var(--background-color);
+}
+
+.header_social-media {
+    &_item > svg {
+        width: 32px;
+        aspect-ratio: 1;
+        cursor: pointer;
+    }
+}
+

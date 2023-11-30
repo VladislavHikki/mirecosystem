@@ -1,0 +1,84 @@
+.division {
+  display: grid;
+  gap: 35px;
+  margin-top: 10px;
+  &_avatar {
+    width: 140px;
+    height: 140px;
+
+    border-radius: 100%;
+  }
+  &_info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+  }
+  &_title {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  &_desc {
+    font-size: 24px;
+  }
+
+  &_teams {
+    display: grid;
+
+    gap: 24px;
+  }
+  &_cards {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin-bottom: 10px !important;
+    }
+    gap: 16px;
+    .cards_title {
+      font-weight: bold;
+    }
+  }
+}
+.header_container {
+  display: flex;
+  // grid-template-columns: 0.4fr 1fr;
+  // max-width: 450px;
+  gap: 16px;
+}
+.text_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+}
+.name_container {
+  font-size: 40px;
+}
+.team_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 30px;
+  .team_contain {
+    white-space: nowrap;
+  }
+}
+.division_card_item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+.division_card_cont {
+  display: grid;
+}
+
+@media (max-width: $large) {
+  .division_card_item {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: $small) {
+  .division_card_item {
+    grid-template-columns: 1fr;
+  }
+}

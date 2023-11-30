@@ -1,0 +1,44 @@
+.wrap-auth {
+    .form-input {
+      font-size: 18px;
+      display: flex;
+      margin: 20px 0;
+      flex-direction: column;
+      input {border-radius: 25px;}
+      label {padding-bottom:10px;}
+    }
+    .form-checkbox {
+      flex-direction: row;
+      align-items: center;
+      label {
+        margin: 0 0 0 10px;
+      }
+      #remember-me {
+        border: none;
+      }
+    }
+    .line {
+      max-width: 508px;
+      margin: 20px 20px 0px 20px;
+      background-color: #f6f6f6;
+      height: 2px;
+    }
+    .text {
+      width: 100%;
+      text-align: center;
+      padding: 10px 0 40px 0;
+    }
+    .text a {
+      color: #878787;
+    }
+    .wrap-auth {
+      @media screen and (max-width: $x-small) {
+        padding: 0px;
+        width: 100%;
+      }
+    }
+    .wrap-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }

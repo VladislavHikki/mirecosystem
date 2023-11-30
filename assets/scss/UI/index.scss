@@ -1,0 +1,121 @@
+.user-status {
+  position: absolute;
+  z-index: 3;
+  aspect-ratio: 1;
+  &_type {
+    &--starter {
+      background-image: url(/user/status/S.svg);
+    }
+    &--expert {
+      background-image: url(/user/status/E.svg);
+    }
+    &--profi {
+      background-image: url(/user/status/P.svg);
+    }
+    &--guru {
+      background-image: url(/user/status/G.svg);
+    }
+  }
+  &_size {
+    &--default {
+      height: 33px;
+      bottom: -5px;
+      right: -11px;
+      &-without-border {
+        height: 33px;
+        bottom: -5px;
+        right: -5px;
+      }
+    }
+    &--medium {
+      height: 22px;
+      bottom: -5px;
+      right: -11px;
+      &-without-border {
+        height: 22px;
+        bottom: -5px;
+        right: -5px;
+      }
+    }
+    &--min {
+      height: 16px;
+      bottom: -6px;
+      right: -7px;
+      &-without-border {
+        height: 16px;
+        bottom: -3px;
+        right: -3px;
+      }
+    }
+  }
+}
+
+.border-trainer {
+  position: absolute;
+  z-index: 2;
+  &_size {
+    &--default {
+      width: 120px;
+      height: 120px;
+      left: -10px;
+      top: -8px;
+    }
+    &--medium {
+      width: 78px;
+      height: 78px;
+      left: -10px;
+      top: -8px;
+    }
+    &--min {
+      width: 58px;
+      height: 58px;
+      left: -8px;
+      top: -4px;
+    }
+  }
+}
+
+.notification {
+  position: relative;
+  &_circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: var(--notification-color);
+    color: white;
+    width: 26px;
+    top: -20%;
+    right: -30%;
+    border-radius: 50%;
+    padding: 5px;
+    aspect-ratio: 1;
+  }
+}
+
+.avatar {
+  object-fit: contain;
+  cursor: pointer;
+  &_size {
+    &--medium {
+      width: 60px !important;
+      height: 60px !important;
+    }
+    &--default {
+      width: 100px;
+      height: 100px;
+    }
+    &--min {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
+
+.rounded {
+  border-radius: 1rem;
+}
+
+.shadow {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+}

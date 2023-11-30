@@ -1,0 +1,20 @@
+$x-small: 575.98px;
+$small: 767.98px;
+$medium: 991.98px;
+$large: 1199.98px;
+$x-large: 1399.98px;
+$big: 1440px;
+
+// colors
+
+:root {
+  --success-text: #34ca2c;
+  --error-text: #f81111;
+  --date-text:#9b9b9b;
+  --background-color: white;
+  --notification-color: #be1111;
+  --blue: #2c96ea;
+  --gray: #9b9b9b;
+  --user-message: rgba(44,150,234,.2);
+  --other-user-message: white;
+}

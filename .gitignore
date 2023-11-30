@@ -1,3 +1,5 @@
+.output
+
 # Logs
 logs
 *.log
@@ -125,3 +127,13 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+.idea/2geza.iml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/modules.xml
+.idea/prettier.xml
+.idea/vcs.xml
+yarn.lock
+.idea/workspace.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/codeStyles/Project.xml
+.idea/workspace.xml

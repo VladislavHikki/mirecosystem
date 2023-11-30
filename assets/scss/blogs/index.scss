@@ -1,0 +1,59 @@
+.coin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  &_name {
+    display: flex;
+    gap: 20px;
+  }
+  &_info {
+    color: aquamarine;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+  }
+  &_rates {
+    color: white;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    &-day-less > span,
+    &-year-less > span {
+      color: var(--error-text);
+    }
+    &-day-greater > span,
+    &-year-greater > span {
+      color: var(--success-text);
+    }
+
+    &-day-nothing > span,
+    &-year-nothing > span {
+      color: #b16ced;
+    }
+  }
+}
+.posts {
+  &_container {
+    display: flex;
+    gap: 32px;
+    justify-content: space-around;
+    &_cards,
+    &_popular_cards {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: $x-large) {
+  .posts {
+    &_container {
+      flex-direction: column;
+    }
+  }
+}
+.nef {
+  background-color: black;
+}

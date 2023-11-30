@@ -1,0 +1,120 @@
+.finances {
+  width: 100%;
+  height: 100%;
+  .tab__button {
+    // padding: 0.75em;
+    width: 190px;
+    background: linear-gradient(90.25deg, #2c96ea 9.03%, #00d1ff 98.03%) !important;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 23.5px;
+    &_type {
+      &--lemon {
+        font-size: 16px;
+        border: 2px solid black;
+        width: 190px;
+        font-weight: 700;
+        height: fit-content;
+        padding: 12px 15px;
+        border-radius: 25px;
+        background-color: #ffdb00;
+        color: black;
+        .p-button-label {
+          border: 3px solid #ffdb00;
+          border-radius: 23.5px;
+        }
+        &.p-button:enabled:hover,
+        &.p-button:enabled:active {
+          background: #ffdb00;
+          color: unset;
+          border-color: unset;
+        }
+      }
+    }
+    &_active {
+      color: #2c96ea !important;
+      border: 1px solid #2c96ea !important;
+      background: rgba(255, 255, 255, 0) !important;
+      &:has(.tab__button_type--lemon) {
+        border: 4px solid #ffdb00 !important;
+      }
+      &_type {
+        &__lemon {
+          font-size: 16px;
+          border: 2px solid black;
+          width: 190px;
+          font-weight: 700;
+          height: fit-content;
+          padding: 0;
+          border-radius: 25px;
+          background-color: white;
+          color: black;
+          .p-button-label {
+            border: 3px solid #ffdb00;
+            padding: 12px 20px;
+          }
+        }
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    .p-button-label {
+      transition: unset !important;
+    }
+    .p-button {
+      transition: unset !important;
+    }
+  }
+  .modal-window {
+    position: absolute;
+  }
+  @media (max-width: $small) {
+    .modal-window {
+      width: 90%;
+    }
+    .transactions {
+      .transactions__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+    .tabs__buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .finances__buttons .tab__button:nth-child(2) {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+    .finance__container {
+      margin: 0;
+    }
+    .transfer-card__body {
+      max-height: none;
+      padding-right: 10px;
+    }
+    .card-info {
+      flex-direction: column;
+      align-items: center;
+      .card-info__wallet_background {
+        padding: 1px;
+        .card-info__wallet {
+          margin: 0 auto;
+        }
+      }
+      .card-info__numbers {
+        margin: 0;
+      }
+    }
+    .transfer-points {
+      display: block;
+      margin: 20px auto;
+    }
+  }
+}

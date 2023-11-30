@@ -1,0 +1,70 @@
+.profile {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+ 
+  .card_h {
+    margin-bottom: 34px;
+  }
+  .profile_container {
+    width: 64%;
+  }
+
+  .users_info {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 25px;
+    .users_info_item {
+      .user-link {
+        font-weight: 400;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+  }
+
+  @media (max-width: $large) {
+    .users_info {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .profile_container {
+      width: 100% !important;
+    }
+    .personalArea {
+      padding: 19px 15px;
+    }
+  }
+  @media (max-width: $small) {
+    .users_info {
+      justify-content: normal !important;
+    }
+  }
+  @media screen and (max-width: $x-small) {
+    .users_info {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .referal__container {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 320px) {
+    .user-link {
+      justify-content: flex-start;
+      align-items: center !important;
+      flex-direction: row !important;
+      gap: 20px;
+    }
+    .users_info {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+    }
+  }
+  @media (max-width: $x-large) {
+    .profile_container {
+      width: 100%;
+    }
+  }
+}

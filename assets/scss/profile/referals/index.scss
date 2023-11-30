@@ -1,0 +1,211 @@
+.myReferal {
+    display: flex;
+    flex-direction: column;
+    .p-dropdown {
+      margin-bottom: 20px;
+    }
+    .button-myRefer {
+      width: 191px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      color: white;
+      //border: none;
+    }
+    .button-myReferAdd {
+      width: 272px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      color: white;
+      //border: none;
+    }
+    .myReferal_btns {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 52px;
+      margin-bottom: 80px;
+      button {
+        background: linear-gradient(90.25deg, #2c96ea 9.03%, #00d1ff 98.03%) !important;
+        //box-shadow: 0px 4px 4px rgba(0, 142, 255, 0.1);
+        border-radius: 23.5px;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: linear-gradient(90.25deg, #2c96ea 9.03%, #00d1ff 98.03%) !important;
+        //box-shadow: 0px 4px 4px rgba(0, 142, 255, 0.1);
+        border-radius: 23.5px;
+        transition: 0.3s;
+      }
+
+      button:focus {
+        background: transparent;
+        color: #2a9aec;
+      }
+      .inviteToSite_btn {
+        background: linear-gradient(90.25deg, #01c314 9.03%, #7aea85 98.03%);
+        box-shadow: 0px 4px 4px rgba(0, 142, 255, 0.1);
+        border-radius: 23.5px;
+      }
+      .active_myReferal_btn {
+        background: transparent !important;
+        border: 1px solid #2a9aec;
+        color: #2a9aec;
+        filter: drop-shadow(0px 4px 4px rgba(0, 142, 255, 0.1));
+        border-radius: 23.5px;
+        transition: 0.3s;
+      }
+    }
+    .myReferal_content {
+      display: flex;
+      gap: 56px;
+      widows: 100%;
+      .myAchievements {
+        display: flex;
+        gap: 55px;
+        flex-wrap: wrap;
+        color: rgba(0, 0, 0, 0.6);
+        .myReferal_count,
+        .myPoints {
+          width: 118px;
+          height: 35px;
+          border: 1px solid #2c96ea;
+          border-radius: 12px;
+          margin: 0;
+          margin-bottom: 8px;
+        }
+        margin-bottom: 46px;
+      }
+      .referal_levels {
+        display: flex;
+        flex-direction: column;
+        width: 208px;
+        .allLevels {
+          background: linear-gradient(90.25deg, #2c96ea 9.03%, #00d1ff 98.03%) !important;
+          box-shadow: 0px 4px 4px rgba(0, 142, 255, 0.1);
+          border-radius: 10px;
+          font-size: 20px;
+          color: white;
+          font-weight: 400;
+          margin-bottom: 14px;
+          padding-top: 14px;
+          padding-bottom: 14px;
+          padding-left: 20px;
+          padding-right: 20px;
+          white-space: nowrap;
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+          text-align: center;
+          .allLevels_arrow {
+            background-image: url(~/assets/images/arrow_allLevels.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            rotate: 180deg;
+            height: 20px;
+            width: 30px;
+            transition: 0.3s;
+          }
+        }
+        .level_list {
+          border: 1px solid #2c96ea;
+          border-radius: 10px;
+          height: auto;
+          transition: 0.3s;
+          color: rgba(0, 0, 0, 0.6);
+          overflow: hidden;
+          cursor: pointer;
+          .level {
+            border-bottom: 1px solid #2c96ea;
+            text-align: center;
+            padding: 14px 62px;
+            font-size: 18px;
+          }
+          .level:last-child {
+            border: none;
+          }
+        }
+        .level_list_close {
+          height: 0px;
+          border: none;
+          transition: 0.3s;
+        }
+        .allLevels_arrow_active {
+          rotate: 0deg !important;
+          transition: 0.3s;
+        }
+      }
+      .btns_pagination {
+        display: flex;
+        gap: 19px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        align-self: flex-end;
+        button {
+          width: 25px;
+          height: 25px;
+          padding: 0;
+          margin: 0;
+          background: transparent;
+          //box-shadow: none;
+        }
+        .arrow_left_pagination {
+          background-image: url(~/assets/images/arrow_left_pagination.png);
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+        .arrow_right_pagination {
+          background-image: url(~/assets/images/arrow_right_pagination.png);
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+      }
+    }
+    .referal_list_content {
+      width: 100%;
+    }
+  
+    .referal_list {
+      width: 100%;
+    }
+  
+    @media (max-width: $medium) {
+      .allLevels {
+        margin: 0 auto;
+      }
+      .level_list {
+        margin: 0 auto;
+      }
+      .myAchievements {
+        flex-wrap: nowrap !important;
+      }
+    }
+  
+    @media (max-width: $x-small) {
+      .myReferal .myReferal_content {
+        flex-direction: column;
+      }
+      .myReferal .myReferal_content .referal_levels {
+        width: 100%;
+      }
+  
+      .myAchievements {
+        flex-direction: column;
+      }
+  
+      .myReferal .myReferal_btns {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        .referral-code {
+          margin-left: 15px;
+        }
+      }
+  
+      .btns_pagination {
+        justify-content: center;
+      }
+    }
+  }

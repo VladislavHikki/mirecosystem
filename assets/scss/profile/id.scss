@@ -1,0 +1,7 @@
+.profileTeam {
+    &_container, &_levels {
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+    }
+}

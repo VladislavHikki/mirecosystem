@@ -1,0 +1,98 @@
+@import 'variables';
+@import 'reset';
+@import 'cards';
+@import 'cards-containers';
+@import 'global';
+
+@import 'division/index.scss';
+@import 'blogs/index.scss';
+@import 'profile/chat/index.scss';
+@import 'profile/resources/index.scss';
+@import 'resources/index.scss';
+@import 'profile/index.scss';
+@import 'about-project/index.scss';
+@import 'profile/sponsorship/index.scss';
+@import 'profile/referals/index.scss';
+@import 'profile/settings/index.scss';
+@import 'profile/finance/index.scss';
+@import 'profile/teams/index.scss';
+@import 'profile/notification/index.scss';
+@import 'profile/id.scss';
+@import 'auth/index.scss';
+@import 'teams/id.scss';
+@import 'teams/index.scss';
+@import 'UI/index.scss';
+@import 'UI/menu.scss';
+@import 'prime-vue/index.scss';
+
+@font-face {
+  font-family: 'Didact Gothic';
+  src: url(~/assets/fonts/DidactGothic-Regular.ttf);
+}
+
+// .page-transition-enter-active,
+// .page-transition-leave-active {
+//   transition: all .4s;
+//   opacity: 1;
+// }
+// .page-transition-enter-from,
+// .page-transition-leave-to {
+//   opacity: 0;
+// }
+
+
+html,
+body {
+  // scroll-behavior: smooth;
+  overflow-x: clip;
+  height: 100%;
+  background-color: var(--background-color);
+  font-family: 'Didact Gothic';
+  font-style: normal;
+  font-weight: 400;
+}
+#__nuxt {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+.scroll-locked {
+  overflow: hidden;
+}
+main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding: 15px 100px 60px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+a {
+  color: #000;
+}
+
+// h2 {
+//   font-size: 32px;
+//   margin-bottom: 34px;
+// }
+
+@media (max-width: $small) {
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .main-content {
+    width: 100%;
+  }
+}
